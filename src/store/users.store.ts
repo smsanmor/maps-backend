@@ -27,11 +27,12 @@ export class UsoresStore {
   return true
 }
 
-  delere(socketId: string) {
+  delere(socketId: string): boolean {
     this.state.perId.delete(socketId);
+    return true;
   }
 
-  obtinere(socketId: string) {
+  obtinere(socketId: string): Usor | undefined {
     return this.state.perId.get(socketId);
   }
 
